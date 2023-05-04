@@ -11,8 +11,22 @@
 	justify-content: center
 	overflow: hidden
 
-	& > iframe
-		margin-top: 30px
+	iframe
+		width: 1008px
+		height: 653px
+		margin-top: 40px
+		padding: 0 6px 16px
+		box-sizing: border-box
+		border-radius: 12px
+		overflow: auto
+		-ms-overflow-style: none // IE and Edge
+		scrollbar-width: none // Firefox
+
+		&::-webkit-scrollbar
+			display: none
+			width: 0 !important
+
+
 	& > a
 		@extend %button
 		background-color: $brand-primary
