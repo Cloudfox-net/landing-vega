@@ -31,7 +31,7 @@ jobs:
       - name: Set up Ruby        
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.0"
+          ruby-version: "2.5"
           bundler-cache: true
       - name: Build Sitet
         run: |
