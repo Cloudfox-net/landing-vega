@@ -85,10 +85,32 @@ $(document).ready(function(){
   // Newsletter feedback
   $(".newsletter form").on("submit", function(event) {
     event.preventDefault();
-    $("#newsletter").val('');
-    $('.newsletter .mail').hide();
-    $('.newsletter .feedback').fadeIn();
+
+    var email = $("#newsletter").val();
+
+    $.get({
+        url: "https://nova.vegacheckout.com.br/users/leads?email="+email,
+        type: 'GET',
+        dataType: 'jsonp',
+        cors: true ,
+        contentType:'application/json',
+        secure: true,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      },
+
+      function() {
+
+      $("#newsletter").val('');
+      $('.newsletter .mail').hide();
+      $('.newsletter .feedback').fadeIn();
+
+    });
+
   });
+
+
 
 
   // Show/hide mobile menu
