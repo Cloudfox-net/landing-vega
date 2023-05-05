@@ -38,16 +38,6 @@ let scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 
-// ButterJS scroll momentum
-// butter.init({
-//   wrapperId: 'butter',
-//   wrapperDamper: 0.03,//0.08 default
-//   cancelOnTouch: true
-// });
-
-
-
-
 // Show elements on scroll
 const animateHTML = function() {
   let elems, windowHeight;
@@ -84,7 +74,7 @@ $(document).ready(function(){
 
   // Newsletter feedback
   $(".newsletter form").on("submit", function(event) {
-      //event.preventDefault();
+      // event.preventDefault();
       $("#newsletter").val('');
       $('.newsletter .mail').hide();
       $('.newsletter .feedback').fadeIn();
@@ -190,6 +180,4 @@ $(document).ready(function(){
       }
     ]
   });
-
-
 });
