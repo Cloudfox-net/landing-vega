@@ -64,23 +64,16 @@ const animateHTML = function() {
 }
 animateHTML().init()
 
-
-
-
-
-
 // jQuery scripts
 $(document).ready(function(){
 
   // Newsletter feedback
   $(".newsletter form").on("submit", function(event) {
       // event.preventDefault();
-      $("#newsletter").val('');
+      // $("#newsletter").val('');
       $('.newsletter .mail').hide();
       $('.newsletter .feedback').fadeIn();
   });
-
-
 
 
   // Show/hide mobile menu
