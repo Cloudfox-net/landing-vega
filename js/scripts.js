@@ -84,16 +84,10 @@ $(document).ready(function(){
 
   // Newsletter feedback
   $(".newsletter form").on("submit", function(event) {
-    //event.preventDefault();
-
-    
-
+      //event.preventDefault();
       $("#newsletter").val('');
       $('.newsletter .mail').hide();
       $('.newsletter .feedback').fadeIn();
-
-    
-
   });
 
 
