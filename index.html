@@ -22,14 +22,8 @@ title: Vega Checkout
         </header>
 
         <form method="get" action="{{ site.signup }}">
-          <input
-            type="email"
-            placeholder="Digite seu e-mail"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            required
-            id="email"
-            name="email"
-          >
+          <input type="email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+            id="email" name="email">
           <button type="submit" title="Comece a vender" name="submit">
             Comece a vender<span> gratuitamente</span>
           </button>
@@ -43,9 +37,7 @@ title: Vega Checkout
 
       <div class="checkout">
         <img src="{{ site.url }}/img/mob1.webp" alt="Vega Checkout">
-        <span></span><span></span><span></span><span></span><span></span
-        ><span></span><span></span><span></span><span></span><span></span
-        ><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
     </div>
 
@@ -53,10 +45,18 @@ title: Vega Checkout
     <div class="possibilities">
       <h2>Para todas as possibilidades</h2>
       <div class="cards">
-        <div class="card fisico"><h3>Produtos físicos</h3></div>
-        <div class="card digital"><h3>Produtos digitais</h3></div>
-        <div class="card assinatura"><h3>Assinaturas</h3></div>
-        <div class="card importado"><h3>Importados</h3></div>
+        <div class="card fisico">
+          <h3>Produtos físicos</h3>
+        </div>
+        <div class="card digital">
+          <h3>Produtos digitais</h3>
+        </div>
+        <div class="card assinatura">
+          <h3>Assinaturas</h3>
+        </div>
+        <div class="card importado">
+          <h3>Importados</h3>
+        </div>
       </div>
     </div>
 
@@ -137,10 +137,8 @@ title: Vega Checkout
   <section class="sales-recovery">
     <div>
       <div class="titles">
-        <strong
-          >Disparo de mensagens por <mark>e-mail</mark> e
-          <mark>SMS</mark></strong
-        >
+        <strong>Disparo de mensagens por <mark>e-mail</mark> e
+          <mark>SMS</mark></strong>
         <h2>
           Ferramentas completas para <b>conversão</b> e
           <b>recuperação de vendas</b>.
@@ -345,12 +343,8 @@ title: Vega Checkout
           <strong>Fatura mais de 1 milhão no mês?</strong>
           <p>Podemos fazer um plano personalizado para você!</p>
         </div>
-        <a
-          href="https://api.whatsapp.com/send?phone=551135007861&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20checkout%20Vega"
-          target="_blank"
-          title="Solicitar orçamento"
-          >Solicitar orçamento</a
-        >
+        <a href="https://api.whatsapp.com/send?phone=551135007861&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20checkout%20Vega"
+          target="_blank" title="Solicitar orçamento">Solicitar orçamento</a>
       </div>
     </div>
   </section>
@@ -380,12 +374,8 @@ title: Vega Checkout
           <dt>Atualmente</dt>
           <dd>
             Fundadores da
-            <a
-              href="https://perfectpay.com.br/"
-              title="Perfect Pay"
-              target="_blank"
-              >Perfect Pay</a
-            >, uma plataforma de produtores e afiliados, que já transacionou
+            <a href="https://perfectpay.com.br/" title="Perfect Pay" target="_blank">Perfect Pay</a>, uma plataforma de
+            produtores e afiliados, que já transacionou
             mais de 1 bilhão.
           </dd>
         </dl>
@@ -409,19 +399,16 @@ title: Vega Checkout
 
   <!-- Newsletter -->
   <div class="newsletter">
-    <form method="get" action="https://nova.vegacheckout.com.br/users/leads">
+
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+    <form method="get" target="dummyframe" action="https://nova.vegacheckout.com.br/users/leads">
       <fieldset>
         <strong>Receba conteúdo exclusivo</strong>
 
         <div class="mail">
-          <input
-            type="email"
-            placeholder="Digite seu e-mail"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            required
-            id="newsletter"
-            name="email"
-          >
+          <input type="email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+            id="newsletter" name="email">
           <input type="submit" title="Enviar" value="">
         </div>
 
@@ -429,15 +416,9 @@ title: Vega Checkout
           <em>E-mail recebido com sucesso.</em>
         </div>
 
-        <small
-          >Ao aderir à nossa newsletter você concorda com os
-          <a
-            href="{{ site.legal }}"
-            title="Termos e Políticas de Privacidade"
-            target="_blank"
-            >Termos e Políticas de Privacidade</a
-          ></small
-        >
+        <small>Ao aderir à nossa newsletter você concorda com os
+          <a href="{{ site.legal }}" title="Termos e Políticas de Privacidade" target="_blank">Termos e Políticas de
+            Privacidade</a></small>
       </fieldset>
 
       <fieldset>
