@@ -5,53 +5,53 @@ name: Landing Vega
 
 run-name: Workflow initiated by ${{ github.actor }}
 
-on:      
-  
+on:
   # Triggers the workflow on push for the main branch
   push:
     branch: [main]
-  
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_DEFAULT_REGION: 'us-east-1'
+  AWS_DEFAULT_REGION: "us-east-1"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Set up Ruby        
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
           bundler-cache: true
-      - name: Build Sitet
+      - name: Install deps
+        run: bundle install --path vendor/bundle
+      - name: Build Site
         run: |
           bundle exec jekyll build
           env:
             JEKYLL_ENV: production
-      - name: 'Upload Artifact'
+      - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
         with:
           name: landing-build-artifact
           path: _site
-  
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: 'Download Artifact'
+      - name: "Download Artifact"
         uses: actions/download-artifact@v3
         with:
           name: landing-build-artifact
@@ -70,4 +70,3 @@ jobs:
       - name: Create AWS Cloudfront Invalidation
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
-          
