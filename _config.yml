@@ -14,7 +14,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Checkout de alta conversão para negócios digitais. Acesse grátis as ferramentas que você precisa para empreender na internet.
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://vegacheckout.com.br" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://d2jzqaq1pnaiae.cloudfront.net"
+url: "https://page.vegacheckout.com.br"
 
 # Import SASS partials from sass_dir
 sass:
