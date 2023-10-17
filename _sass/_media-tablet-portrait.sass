@@ -469,13 +469,17 @@
 		.contato
 			max-width: $column-tablet-portrait-up
 			padding: 64px 0
+			flex-wrap: wrap
+			gap: 16px
 
 			address
-				padding-left: 0
-				padding-top: 32px
-				background:
-					position: 0 0
-					size: 24px auto
+				&:first-of-type,
+				&:nth-of-type(2)
+					flex: 1 0 auto
+				&:last-of-type
+					flex: 0 0 100%
+					p
+						display: none
 
 				strong
 					font-size: 1.4rem

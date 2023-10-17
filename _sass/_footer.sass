@@ -12,6 +12,7 @@
 		width: 100%
 		max-width: $column-big-up
 		display: flex
+		column-gap: 2vw
 		box-sizing: border-box
 		padding: 96px 0
 		position: relative
@@ -19,31 +20,42 @@
 		address
 			flex: 1 1 0
 			box-sizing: border-box
-			padding-left: 112px
 			font-style: normal
 			position: relative
-			background:
-				position: 24px 0
-				repeat: no-repeat
-
-			&:first-of-type
-				background-image: url("../img/whatsapp.svg")
+			border: solid 1px $neutral_50
+			padding: 1.5vw
+			border-radius: 8px
+			
+			&:first-of-type,
+			&:nth-of-type(2)
+				strong
+					background-image: url("../img/whatsapp.svg")
 
 			&:last-of-type
-				background-image: url("../img/ouvidoria.svg")
+				strong
+					background-image: url("../img/ouvidoria.svg")
 
 			strong
 				display: block
-				font-size: 1.75rem
+				font-size: 1.2rem
 				line-height: 140%
 				font-weight: 400
+				padding-left: 56px
+				background:
+					position: 0 center
+					repeat: no-repeat
+					size: 32px auto
+				small
+					font-size: 0.8rem
+					font-weight: lighter
+					opacity: 0.5
 
 			em
 				display: block
 				font-size: 2.5rem
 				line-height: 140%
 				margin: 24px 0
-				font-weight: 700
+				font-weight: 100
 
 			i
 				display: block
@@ -55,6 +67,7 @@
 				font-size: 1.25rem
 				line-height: 140%
 				margin-bottom: 24px
+				font-weight: lighter
 
 			a
 				font-size: 1.25rem
@@ -69,35 +82,46 @@
 					padding-right: 40px
 
 			.qrcode
-				width: 128px
-				padding-top: 168px
 				font-size: 0.9rem
 				line-height: 140%
-				position: absolute
-				left: 50%
-				top: 0
-				transform: translateX(100%)
+				display: block
+				height: 128px
+				padding: 24px 0
+				position: relative
 
 				&::before
 					content: ''
-					width: 100%
+					position: absolute
+					top: 24px
+					left: 0
+					width: 128px
 					height: 128px
-					background: white url("../img/comercial.svg") no-repeat 50% 50%
+					background:
+						color: white
+						repeat: no-repeat
+						position: 50% 50%
 						size: 95% auto
 					border-radius: 4px
-					position: absolute
-					top: 0
-					left: 0
+
+				&.suporte::before
+					background-image: url("../img/qr-suporte.svg")
+				&.comercial::before
+					background-image: url("../img/qr-comercial.svg")
 
 				&::after
 					content: ''
-					width: 40%
-					height: 1px
+					width: 1px
+					height: 128px
 					background-color: white
 					opacity: 0.3
 					position: absolute
-					top: 150px
-					left: 0
+					top: 24px
+					left: 152px
+
+				span
+					padding-left: 176px
+					display: block
+					width: 120px
 
 
 

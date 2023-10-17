@@ -463,13 +463,17 @@
 		.contato
 			max-width: $column-tablet-landscape-up
 			padding: 64px 0
+			flex-wrap: wrap
+			gap: 16px
 
 			address
-				padding-left: 0
-				padding-top: 32px
-				background:
-					position: 0 0
-					size: 24px auto
+				&:first-of-type,
+				&:nth-of-type(2)
+					flex: 1 0 auto
+				&:last-of-type
+					flex: 0 0 100%
+					p
+						display: none
 
 				strong
 					font-size: 1.4rem
@@ -477,21 +481,12 @@
 					font-size: 2rem
 					margin: 16px 0
 				i
-					font-size: 1.4rem
+					font-size: 2rem
 					margin: 16px 0
 				p
 					font-size: 1.1rem
 				a
 					font-size: 1rem
-				.qrcode
-					width: 96px
-					padding-top: 128px
-					transform: translateX(60%)
-
-					&::before
-						height: 96px
-					&::after
-						top: 115px
 
 			.move-up
 				width: 56px
