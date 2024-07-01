@@ -22,6 +22,10 @@ sass:
   style: compressed
 
 # Links
-signup: https://nova.vegacheckout.com.br/users/signup
-login: https://nova.vegacheckout.com.br
+
+#signup: https://nova.vegacheckout.com.br/users/signup
+#login: https://nova.vegacheckout.com.br
+
+signup: https://admin.vegacheckout.com.br/register
+login: https://admin.vegacheckout.com.br/login
 legal: https://vegacheckout.com.br/use-terms-and-privacy-policy.html?v=7
