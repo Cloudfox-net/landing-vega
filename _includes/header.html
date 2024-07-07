@@ -14,8 +14,13 @@
     </div>
 
     <div class="sign-up">
-      <a href="{{ site.login }}" title="Entrar">Entrar</a>
+      <button type="button" onmouseover="showLoginOptions()" title="Entrar">Entrar</button>
       <a href="{{ site.signup }}" title="Cadastre-se grátis">Cadastre-se grátis</a>
+
+      <span class="login-options" onmouseleave="hideLoginOptions()">
+        <a href="{{ site.login }}" title="Acesso a plataforma beta">Plataforma beta</a>
+        <a href="{{ site.legace }}" title="Acesso ao sistema legado">Sistema legado</a>
+      </span>
     </div>
 
     <button type="button" title="Menu" class="menu-mobile-button"></button>

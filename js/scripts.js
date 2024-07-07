@@ -57,6 +57,15 @@ const animateHTML = function() {
 animateHTML().init()
 
 
+// Popup login
+const popupLogin = document.querySelector(".login-options");
+
+function showLoginOptions() {
+  popupLogin.style.display = "flex";
+}
+function hideLoginOptions() {
+  popupLogin.style.display = "none";
+}
 
 
 // jQuery scripts

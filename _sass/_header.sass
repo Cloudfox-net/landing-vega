@@ -73,20 +73,34 @@
 	.sign-up
 		display: flex
 		gap: 20px
+		position: relative
+		button
+			@extend %button
+
 		a
 			@extend %button
 
 			&:hover
 				color: $neutral_50
 
-			&:last-child
-				background-color: $brand-secondary
-				color: white
-				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12)
-				transition: transform 0.5s $ease
+		& > a:last-of-type
+			background-color: $brand-secondary
+			color: white
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12)
+			transition: transform 0.5s $ease
 
-				&:hover
-					transform: scale(1.05)
+			&:hover
+				transform: scale(1.05)
+
+		.login-options
+			position: absolute
+			top: 100%
+			left: -80px
+			background-color: white
+			border-radius: 0.5rem
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+			display: none
+			flex-flow: column
 
 
 	.menu-mobile-button
