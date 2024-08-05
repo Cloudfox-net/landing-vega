@@ -57,14 +57,25 @@ const animateHTML = function() {
 animateHTML().init()
 
 
-// Popup login
+// Popup login/signup
 const popupLogin = document.querySelector(".login-options");
+const popupSignup = document.querySelector(".signup-options");
 
 function showLoginOptions() {
   popupLogin.style.display = "flex";
+  popupSignup.style.display = "none";
 }
 function hideLoginOptions() {
   popupLogin.style.display = "none";
+}
+
+
+function showSignOptions() {
+  popupSignup.style.display = "flex";
+  popupLogin.style.display = "none";
+}
+function hideSignOptions() {
+  popupSignup.style.display = "none";
 }
 
 

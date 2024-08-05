@@ -15,11 +15,16 @@
 
     <div class="sign-up">
       <button type="button" onmouseover="showLoginOptions()" title="Entrar">Entrar</button>
-      <a href="{{ site.signup }}" title="Cadastre-se grátis">Cadastre-se grátis</a>
+      <button type="button" onmouseover="showSignOptions()" title="Cadastre-se grátis">Cadastre-se grátis</button>
 
       <span class="login-options" onmouseleave="hideLoginOptions()">
-        <a href="{{ site.login }}" title="Acesso a plataforma beta">Plataforma nova</a>
-        <a href="{{ site.legace }}" title="Acesso ao sistema legado">Plataforma antiga</a>
+        <a href="{{ site.login }}" title="Acesso a plataforma beta">Login na plataforma nova</a>
+        <a href="{{ site.legace }}" title="Acesso ao sistema legado">Login na plataforma antiga</a>
+      </span>
+
+      <span class="signup-options" onmouseleave="hideSignOptions()">
+        <a href="{{ site.signup }}" title="Cadastro na plataforma beta">Cadastre-se na plataforma nova</a>
+        <a href="{{ site.signup_legace }}" title="Cadastro no sistema legado">Cadastre-se na plataforma antiga</a>
       </span>
     </div>
 

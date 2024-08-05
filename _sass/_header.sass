@@ -77,6 +77,12 @@
 		button
 			@extend %button
 
+			&:last-of-type
+				background-color: $brand-secondary
+				color: white
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12)
+				transition: transform 0.5s $ease
+
 		a
 			@extend %button
 
@@ -96,6 +102,16 @@
 			position: absolute
 			top: 100%
 			left: -80px
+			background-color: white
+			border-radius: 0.5rem
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+			display: none
+			flex-flow: column
+
+		.signup-options
+			position: absolute
+			top: 100%
+			right: 0
 			background-color: white
 			border-radius: 0.5rem
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)

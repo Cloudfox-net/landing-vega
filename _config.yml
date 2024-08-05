@@ -23,7 +23,7 @@ sass:
 
 # Links
 
-#signup: https://nova.vegacheckout.com.br/users/signup
+signup_legace: https://nova.vegacheckout.com.br/users/register
 legace: https://nova.vegacheckout.com.br
 signup: https://admin.vegacheckout.com.br/register
 login: https://admin.vegacheckout.com.br/login
